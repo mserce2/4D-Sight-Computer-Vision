@@ -7,7 +7,7 @@ imgQ=cv2.imread("StarMap.png") #Yıldız resmimizi okuyoruz
 h,w,c=imgQ.shape #resmimizin  şeklini yükseklik genişlik ve merkez noktası olarak değerleri değişkenlere atıyoruz
 imgQ=cv2.resize(imgQ,(w//3,h//3)) #Resmimizi orantılı bir şekilde kaydetmek için size'nı ayarlıyoruz Ana resmimizin size comment ettik çünkü resimlerde sıkışma oluyor
 
-orb=cv2.ORB_create(9000) #feature sayısını belirledik resim içersinde 1000 tane özellik arayacak
+orb=cv2.ORB_create(1000) #feature sayısını belirledik resim içersinde 1000 tane özellik arayacak
 kp1,des1=orb.detectAndCompute(imgQ,None) #KeyPoints1 Description1=> anahtar noktaları bul ve tanıyıcılar ile eşleştir
 # impKp1=cv2.drawKeypoints(imgQ,kp1,None) #Bulduğumuz anahtar noktalarını çizdiriyoruz.Test ettikten sonra comment yapabilirz
 # cv2.imshow("KeyPointsQuery",impKp1)
